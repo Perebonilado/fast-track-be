@@ -19,11 +19,8 @@ app.use(express.json());
 // Middleware to parse JSON
 app.use(express.json());
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 // GET /overview
 app.get("/overview", async (req, res) => {
-  await delay(5000)
   res.json({
     status: "average",
     currentIndex: 40,
